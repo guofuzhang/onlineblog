@@ -1,0 +1,59 @@
+﻿﻿<!DOCTYPE html>
+<html>
+<head>
+	<script src="../View/Js/jquery.js"></script>
+	<script src="http://res.xiami.net/pc/lay/lib.js"></script>
+	<script src="../View/layer/layer.min.js"></script>
+<meta charset="utf-8">
+<link href="../View/Css/public.css" rel="stylesheet" type="text/css" />
+<title>用户管理</title>
+</head>
+
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0" oncontextmenu="self.event.returnValue=false">
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1" class="border">
+	<tr class="topbg"><td>用户管理</td></tr>
+	<tr class="tdbg">
+		<td height="30">&nbsp;&nbsp;
+			<a href="http://www.kuaidianwoba.com/admin/Controller/articlelist_controller.php">管理文章</a>&nbsp;|&nbsp;
+			<a href="user_controller.php">添加用户</a>|
+			<a href="user_controller.php">当前用户:<{$arrs['s_name']}></a>
+			<a href="?a=logout">退出登录</a>
+		</td>
+	</tr>
+</table>
+<br />
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="border">
+
+	<tr class="title">
+		<td align="center">编号</td>
+		<td align="center">用户名</td>
+		<td align="center">真实姓名</td>
+		<td align="center">联系电话</td>
+		<td align="center">角色</td>
+		<td align="center">最后一次ip</td>
+		<td align="center">最后登录时间</td>
+		<td align="center">操作选项</td>
+	</tr>
+	<{foreach $arrs as $arr}>
+
+
+	<tr class="tdbg">
+		<td align="center"><{$arr['id']}></td>
+		<td align="center"><{$arr['logname']}></td>
+		<td align="center"><{$arr['realname']}></td>
+		<td align="center"><{$arr['tel']}></td>
+		<td align="center"><{$arr['rolename']}></td>
+		<td align="center"><{$arr['last_login_ip']}></td>
+		<td align="center"><{date('Y-m_d;H:i:s',$arr['last_login_time'])}></td>
+		<td align="center">
+			<a href="#">修改</a> |
+			<a id="a_id" href="?a=del&id=<{$arr['id']}>">删除</a>
+		</td>
+	</tr>
+	<{/foreach}>
+</table>
+</body>
+<script>
+
+</script>
+</html>

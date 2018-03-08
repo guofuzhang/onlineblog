@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+    <script src="../View/assets/js/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="../View/assets/js/amazeui.ie8polyfill.min.js"></script>
+    <script src="http://res.xiami.net/pc/lay/lib.js"></script>
+    <script src="../View/layer/layer.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>张国福的技术博客  | <{$arr['art_title']}></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="../View/assets/i/favicon.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../View/assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="../View/assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileImage" content="../View/assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="../View/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../View/assets/css/app.css">
+</head>
+
+<body id="blog-article-sidebar">
+<!-- header start -->
+<header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
+    <div class="am-u-sm-8 am-u-sm-centered">
+        <img width="200" src="../View/images/logo.jpg" alt="Amaze UI Logo"/>
+        <h2 class="am-hide-sm-only">每天唤醒我们的不是闹钟,而是我们的梦想!</h2>
+    </div>
+</header>
+<hr>
+
+<!-- nav start -->
+<nav class="am-g am-g-fixed blog-fixed blog-nav">
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="blog-collapse">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+            <li ><a href="http://www.kuaidianwoba.com/home/Controller/index_controller.php?pagenow=1">首页</a></li>
+            <li><a href="../View/lw-img.html">图片库</a></li>
+            <li ><a href="http://www.kuaidianwoba.com/home/Controller/self_controller.php">关于我</a></li>
+        </ul>
+        <form class="am-topbar-form am-topbar-right am-form-inline" role="search">
+            <div class="am-form-group">
+                <input type="text" class="am-form-field am-input-sm" placeholder="搜索">
+            </div>
+        </form>
+    </div>
+</nav>
+<hr>
+<!-- nav end -->
+<hr>
+<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed blog-content">
+    <div class="am-u-md-8 am-u-sm-12">
+        <article class="am-article blog-article-p">
+            <div class="am-article-hd">
+                <h1 class="am-article-title blog-text-center"><{$arr['art_title']}></h1>
+                <p class="am-article-meta blog-text-center">
+
+                    <span><a href="#"><{$arr['AUTHORS']}> &nbsp;</a></span>-
+                    <span><a href="#"><{$arr['created_at']}></a></span>
+                </p>
+            </div>
+            <div class="am-article-bd">
+                <img width="760px" src="../../admin/Controller/<{$arr['img']}>" alt="" class="blog-entry-img blog-article-margin">
+                <{$arr['content']}>
+            </div>
+        </article>
+
+        <div class="am-g blog-article-widget blog-article-margin">
+            <div class="am-u-lg-4 am-u-md-5 am-u-sm-7 am-u-sm-centered blog-text-center">
+
+                <hr>
+                <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+                <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+            </div>
+        </div>
+
+        <hr>
+        <ul class="am-pagination blog-article-margin">
+            <li class="am-pagination-prev"><a href="?id=<{$arr1['pre']}>" class="">&laquo; 一切的回顾</a></li>
+            <li class="am-pagination-next"><a href="?id=<{$arr1['next']}>">不远的未来 &raquo;</a></li>
+        </ul>
+        <hr>
+        <{if $comments=="nothing in your table"}>
+        <h3><span>来自 &nbsp;: &nbsp;</span><span class="blog-color">这里还没有评论哦,快来添加你的评论吧</span></h3>
+        <{else}>
+        <{foreach $comments as $comment}>
+        <div class="am-g blog-author blog-article-margin">
+            <div class="am-u-sm-3 am-u-md-3 am-u-lg-2">
+                <img src="../View/images/toux.png" alt="" class="blog-author-img am-circle">
+            </div>
+            <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
+                <h3><span>来自 &nbsp;: &nbsp;</span><span class="blog-color"><{$comment['comment_name']}></span>的评论&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size: small;color: rgba(128,128,128,0.7)"><{$comment['create_at']}></span></h3>
+                <p><{$comment['comment_main']}></p>
+            </div>
+        </div>
+        <{/foreach}>
+        <{/if}>
+        <hr>
+
+        <form class="am-form am-g" name="form1" id="form1" >
+            <h3  class="blog-comment">评论</h3>
+            <fieldset>
+                <div class="am-form-group am-u-sm-4 blog-clear-left">
+                    <input name="name" type="text" class="" id="name" placeholder="名字4-8个字符哦">
+                </div>
+                <div class="am-form-group">
+                    <textarea name="main" id="main" class="" rows="5" placeholder="不超过60个字哦"></textarea>
+                </div>
+
+                <p><button type="submit" class="am-btn am-btn-default">发表评论</button></p>
+            </fieldset>
+        </form>
+
+        <hr>
+    </div>
+
+    <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-text-center blog-title"><span>About ME</span></h2>
+            <img src="../View/assets/i/f14.jpg" alt="about me" class="blog-entry-img" >
+            <p>关于生活</p>
+            <p>
+                生活坏到一定程度就会好起来，因为它无法更坏。努力过后，才知道许多事情，坚持坚持，就过来了。
+        </div>
+
+        <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
+            <h2 class="blog-title"><span>TAG cloud</span></h2>
+            <div class="am-u-sm-12 blog-clear-padding">
+                <a href="" class="blog-tag">PHP</a>
+                <a href="" class="blog-tag">LARAVEL</a>
+                <a href="" class="blog-tag">HTML5</a>
+                <a href="" class="blog-tag">JS</a>
+                <a href="" class="blog-tag">CSS3</a>
+                <a href="" class="blog-tag">EC6</a>
+            </div>
+        </div>
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-title"><span>生活格言</span></h2>
+            <ul class="am-list">
+                <li><a href="#">其嗜欲深者，其天机浅。</a></li>
+                <li><a href="#">不管前方的路有多苦，只要走的方向正确，不管多么崎岖不平，都比站在原地更接近幸福。</a></li>
+                <li><a href="#">  至少应该展翅高飞一次，哪怕是一场没有方向的旅行。至少应该高飞，在未落地之前。</a></li>
+                <li><a href="#">损着别人的牙眼，却反对报复，主张宽容的人，万勿和他
+                    接近。</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- content end -->
+
+
+<footer class="blog-footer">
+    <div class="blog-text-center">Copyright © 1996 - 2017 Zhang Guofu Corporation, All Rights Reserved</div>
+</footer>
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+
+<![endif]-->
+<script src="../View/assets/js/amazeui.min.js"></script>
+<!-- <script src="../View/assets/js/app.js"></script> -->
+<script>
+    $(function () {
+//    确认操作时触发
+        $("#form1").submit(
+            function (e) {
+                e.preventDefault();
+                var shuju =$(this).serialize();
+                $.ajax({
+                    url:location.href,
+                    data:shuju,
+                    datatype:'json',
+                    type:'post',
+                    success:function (event) {
+                        layer.alert("评论成功",{icon:6},function () {
+                            parent.window.location.href= parent.window.location.href;
+                            layer.close();
+                        });
+                    }
+                })
+            }
+        )
+
+    })
+</script>
+</body>
+</html>

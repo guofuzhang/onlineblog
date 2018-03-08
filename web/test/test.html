@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form id="form1" action="">
+    姓名:<input name="name" type="text">
+    姓别:<input name="sex" type="text">
+    年龄:<input type="age" >
+    <input type="submit">
+</form>
+<input id="hehe" type="button" width="20px" height="5px" value="发送一条数据给后台">
+<script src="jquery.js"></script>
+<script>
+$(function () {
+    $("#form1").submit(function (e) {
+        e.preventDefault();
+        var shuju=$(this).serialize();
+//        console.log($(this).serialize());
+        $.ajax({
+            data:shuju,
+            datatype:'json',
+            type:'post',
+            url:"http://www.fast11.com/0718/my_blog_0729/test/test.php",
+            success:function (e) {
+//               var e1=JSON.parse(e);
+//                console.log(e1.name);
+//                if(e.name=="jim"){
+//                    alert(111);
+//                }
+                console.log(e);
+                console.log(e['name']);
+
+            }
+        })
+
+    })
+
+})
+</script>
+</body>
+</html>
